@@ -16,8 +16,9 @@ app.use(expressValidator());
 //////////////  Global Parameters   //////////////////////////
 global.appRoot = path.resolve(__dirname);
 
-app.use("/sale", require("./routes/saleRoute"));
+app.use("/product", require("./routes/productRoute"));
 app.use("/user", require("./routes/userRoute"));
+app.use("/admin", require("./routes/adminRoute"));
 
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to bezkoder application." });

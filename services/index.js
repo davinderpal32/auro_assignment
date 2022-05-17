@@ -1,4 +1,5 @@
 module.exports = {
-    salesServices: require(appRoot + "/services/salesServices"),
+    adminServices: require(appRoot + "/services/adminServices"),
+    productServices: require(appRoot + "/services/productServices"),
     userServices: require(appRoot + "/services/userServices")
 };

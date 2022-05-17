@@ -25,7 +25,12 @@ exports.userDetail = async (data) => {
 
 exports.updateRow = async (data, userInfo) => {
     let dataToUpdate = {
-        access_token: data.access_token ? data.access_token : userInfo.access_token
+        access_token: data.access_token ? data.access_token : userInfo.access_token,
+        name: data.name ? data.name : userInfo.name,
+        email: data.email ? data.email : userInfo.email,
+        password: data.password ? bcrypt.hashSync(data.password, 11) : userInfo.password,
+        phone_number: data.phone_number ? data.phone_number : userInfo.phone_number,
+        blocked: data.blocked ? data.blocked : userInfo.blocked
     }
     return await Db.users.update(
         dataToUpdate,

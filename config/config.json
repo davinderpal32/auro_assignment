@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "phpmyadmin",
+    "username": "codebrew",
     "password": "codebrew",
-    "database": "salesReport",
+    "database": "aura_assignment",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

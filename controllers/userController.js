@@ -32,7 +32,7 @@ exports.login = async (request, response) => {
         }
 
         let AppDetail = await Services.userServices.userDetail(email);
-        return response.status(200).json({ success: 1, statusCode: 200, msg: "LoggedIn Successfully", AppDetail });
+        return response.status(200).json({ success: 1, statusCode: 200, msg: "User Logged In Successfully", AppDetail });
     }
     catch (e) {
         return response.status(500).json({ success: 0, statusCode: 500, msg: e.message });
