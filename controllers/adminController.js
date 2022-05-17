@@ -83,7 +83,7 @@ exports.deleteUserByAdmin = async (request, response) => {
         if (userInfo) {
             await Services.userServices.updateRow(data, userInfo);
             let AppDetail = await Services.userServices.userDetail(user_id);
-            return response.status(200).json({ success: 1, statusCode: 200, msg: "User Profile Updated Successfully", AppDetail });
+            return response.status(200).json({ success: 1, statusCode: 200, msg: "User Blocked Successfully", AppDetail });
         } else {
             return response.status(400).json({ success: 0, statusCode: 400, msg: "User ID Not Found" });
         }
